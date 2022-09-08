@@ -6,28 +6,12 @@ Introductory project using the django framework in order to learn the tool. The 
 
 # First steps
 PT-BR<br>
-* Fazer download da virtualenv
+Para realizar o setup inicial do projeto bastar executar o comando abaixo:
 ```
-pip install virtualenv
-```
-* Ativar o embiente virtual
-```
-source venv/bin/activate
-```
-* Instalando as dependencias do projeto
-```
-pip install -r requirements.txt
+. local_setup.sh
 ```
 EN<br>
-* Downloading virtualenv
+To perform the initial configuration of the project, simply run the command below:
 ```
-pip install virtualenv
-```
-* Enable the virtual environment
-```
-source venv/bin/activate
-```
-* Downloading project's dependecies
-```
-pip install -r requirements.txt
+. local_setup.sh
 ```
