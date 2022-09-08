@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="  background-color: #F85735">
+{% extends 'main/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<form method='POST'>
+    {% csrf_token %}
+    <div class="row">
+        <div class="col-6">
+          {{ form.name|as_crispy_field }}
+        </div>
+        <div class="col-6">
+          {{ form.email|as_crispy_field }}
+        </div>
+        <div class="col-6">
+            {{ form.telephone|as_crispy_field }}
+        </div>
+      </div>
+    <input type='submit' value='Save'></input>
+</form>
+{% endblock content %}
+</body>
+</html>

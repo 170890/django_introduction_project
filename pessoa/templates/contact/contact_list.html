@@ -1,0 +1,29 @@
+{% extends 'main/base.html' %}
+{% block content %}
+<body style="  background-color: #F85735">
+<a class="btn btn-primary" href="{% url 'contact.new' pk_people %}" >Add Contact</a>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Telephone</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for contact in contacts %}
+        <tr>
+            <td>{{ contact.name }}</td>
+            <td>{{ contact.email }}</td>
+            <td>{{ contact.telephone }}</td>
+            <td>
+                <a href="{% url 'contact.update' pk_people contact.pk %}">Update</a>
+                <a href="{% url 'contact.delete' pk_people contact.pk %}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</body>
+{% endblock content %}
